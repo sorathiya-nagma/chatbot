@@ -16,7 +16,6 @@ The chatbot receives a message from the user, checks the message for predefined 
 * 🌆 Good evening response
 * 🌙 Good night response
 * 🤖 Questions about the chatbot
-* 💻 Basic programming-related questions
 * 😊 Common conversation responses
 * 👋 Goodbye responses
 * ❓ Fallback response for unknown input
