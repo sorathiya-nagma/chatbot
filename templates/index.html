@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+                <div class="logo-icon">🤖</div>
+                <span>AI Chatbot</span>
+            </div>
+
+            <button class="new-chat-btn" onclick="newChat()">
+                <span>＋</span>
+                New Chat
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-info">
+
+            <div class="info-item">
+                <span>🤖</span>
+                <div>
+                    <strong>Rule-Based AI</strong>
+                    <small>Python + Flask</small>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span>⚡</span>
+                <div>
+                    <strong>Fast Response</strong>
+                    <small>Instant replies</small>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button class="clear-btn" onclick="clearChat()">
+                🗑 Clear Chat
+            </button>
+
+            <div class="made-with">
+                Made with Python & Flask
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Chat -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <div class="bot-avatar">
+                    🤖
+                </div>
+
+                <div>
+                    <h2>AI Assistant</h2>
+
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        Online
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="menu-btn" onclick="clearChat()">
+                🗑
+            </button>
+
+        </header>
+
+
+        <!-- Chat Area -->
+        <section class="chat-area" id="chatArea">
+
+            <!-- Welcome Screen -->
+            <div class="welcome" id="welcome">
+
+                <div class="welcome-icon">
+                    🤖
+                </div>
+
+                <h1>How can I help you?</h1>
+
+                <p>
+                    I'm a rule-based chatbot powered by Python and Flask.
+                </p>
+
+
+                <div class="suggestions">
+
+                    <button onclick="sendSuggestion('Hello')">
+                        <span>👋</span>
+                        <div>
+                            <strong>Say hello</strong>
+                            <small>Start a conversation</small>
+                        </div>
+                    </button>
+
+
+                    <button onclick="sendSuggestion('What is Python?')">
+                        <span>📚</span>
+                        <div>
+                            <strong>Greetings</strong>
+                            <small>Good morning,Good afternoon</small>
+                        </div>
+                    </button>
+
+
+                    <button onclick="sendSuggestion('What is Flask?')">
+                        <span>🌐</span>
+                        <div>
+                            <strong>🤖 About the chatbot</strong>
+                            <small>What is your name?,Who are you?</small>
+                        </div>
+                    </button>
+
+
+                    <button onclick="sendSuggestion('What is HTML?')">
+                        <span>💻</span>
+                        <div>
+                            <strong>😊 Casual conversation</strong>
+                            <small>How are you?,How is your day?</small>
+                        </div>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Input Area -->
+        <div class="input-container">
+
+            <div class="input-box">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Message AI Assistant..."
+                    rows="1"
+                    onkeydown="handleKeyDown(event)"
+                ></textarea>
+
+
+                <button
+                    class="send-btn"
+                    id="sendBtn"
+                    onclick="sendMessage()"
+                    title="Send message"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+            <p class="input-note">
+                Rule-based chatbot • Flask Backend
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
