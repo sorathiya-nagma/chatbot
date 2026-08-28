@@ -76,8 +76,6 @@ chatbot/
 │
 ├── README.md
 │
-├── .gitignore
-│
 ├── templates/
 │   └── index.html
 │
